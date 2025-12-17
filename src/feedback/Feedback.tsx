@@ -94,7 +94,7 @@ export default function Feedback() {
       const input = prompt("비밀번호를 입력해주세요.");
       if (input === null) return;
       if (input !== correctPassword) {
-        alert("비밀번호 불일치!");
+        alert("비밀번호가 일치하지 않습니다.");
         return;
       }
     } else {

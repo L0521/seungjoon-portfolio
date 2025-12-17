@@ -31,7 +31,7 @@ export default function FeedbackItem({
         setIsEditing(true);
         return;
       } else {
-        alert("비밀번호가 다릅니다.");
+        alert("비밀번호가 일치하지 않습니다.");
       }
     }
   };
