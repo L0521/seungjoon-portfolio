@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import PortfolioWebsiteDetail from "../Projects/Details/PortfolioWebsiteDetail";
-import PortfolioWebsiteCard from "../Projects/PortfolioWebsiteCard";
-import ContinuousCard from "../Projects/ContinuousCard";
+import PortfolioWebsiteDetail from "../projects/Details/PortfolioWebsiteDetail";
+import PortfolioWebsiteCard from "../projects/PortfolioWebsiteCard";
+import ContinuousCard from "../projects/ContinuousCard";
 
 export default function Project() {
   const [selectedId, setSelectedId] = useState<string | null>(null);

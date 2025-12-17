@@ -5,7 +5,7 @@ import Project from "./Project";
 import profileImg from "../assets/profile.jpeg";
 import Activities from "./Activities";
 import Contact from "./Contact";
-import Feedback from "../Feedback/Feedback";
+import Feedback from "../feedback/Feedback";
 
 export default function Portfolio() {
   const [activeMenu, setActiveMenu] = useState(() => {

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import UMCCard from "../Activities/UMCCard";
-import CouncilCard from "../Activities/CouncilCard";
-import CodingBlogCard from "../Activities/CodingBlogCard";
-import ContinuousCard from "../Activities/ContinuousCard";
-import UMCDetail from "../Activities/Details/UMCDetail";
-import CouncilDetail from "../Activities/Details/CouncilDetail";
-import CodingBlogDetail from "../Activities/Details/CodingBlogDetail";
+import UMCCard from "../activities/UMCCard";
+import CouncilCard from "../activities/CouncilCard";
+import CodingBlogCard from "../activities/CodingBlogCard";
+import ContinuousCard from "../activities/ContinuousCard";
+import UMCDetail from "../activities/Details/UMCDetail";
+import CouncilDetail from "../activities/Details/CouncilDetail";
+import CodingBlogDetail from "../activities/Details/CodingBlogDetail";
 
 export default function Activities() {
   const [selectedId, setSelectedId] = useState<string | null>(null);

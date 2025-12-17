@@ -40,8 +40,14 @@ export default function PortfolioWebsiteCard({
             <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
               TypeScript
             </span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-sky-50 text-sky-600 rounded-full text-sm font-medium">
               Tailwind CSS
+            </span>
+            <span className="px-3 py-1 bg-yellow-50 text-yellow-600 rounded-full text-sm font-medium">
+              Firebase
+            </span>
+            <span className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">
+              Zustand
             </span>
           </div>
         </div>
