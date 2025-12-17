@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import AboutMe from "./AboutMe";
 import Project from "./Project";
@@ -8,7 +8,13 @@ import Contact from "./Contact";
 import Feedback from "../Feedback/Feedback";
 
 export default function Portfolio() {
-  const [activeMenu, setActiveMenu] = useState("About Me");
+  const [activeMenu, setActiveMenu] = useState(() => {
+    return sessionStorage.getItem("currentMenu") || "About Me";
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem("currentMenu", activeMenu);
+  }, [activeMenu]);
 
   // issue 1
   return (
