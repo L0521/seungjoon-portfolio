@@ -25,19 +25,22 @@ export default function FeedbackItem({
   const startEdit = () => {
     if (!isAdmin) {
       const input = prompt("비밀번호를 입력해주세요.");
-      if (input !== item.password) {
-        alert("비밀번호 불일치!");
+      if (input === null) {
         return;
+      } else if (input === item.password) {
+        setIsEditing(true);
+        return;
+      } else {
+        alert("비밀번호가 다릅니다.");
       }
     }
-    setIsEditing(true); // 수정 모드 ON
   };
 
   // 저장 버튼 클릭 시
   const saveEdit = () => {
     if (editText.trim() === "") return alert("내용을 입력해주세요.");
     onUpdate(item.id, editText); // 부모에게 변경 요청
-    setIsEditing(false); // 수정 모드 OFF
+    setIsEditing(false);
   };
 
   return (
