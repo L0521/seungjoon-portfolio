@@ -99,7 +99,7 @@ export default function FeedbackItem({
               canShow ? "text-gray-800" : "text-gray-400"
             }`}
           >
-            {canShow ? item.text : "비공개 글입니다."}
+            {canShow ? item.text : "비공개 메시지입니다."}
           </p>
         )}
       </div>
