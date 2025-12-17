@@ -3,7 +3,7 @@ export default function AboutMe() {
     <div className="flex flex-col gap-8 break-keep">
       {/* 제목 영역 */}
       <div>
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 animate-fade-in-up">
           안녕하세요, <br />
           코드 너머를 생각하는 개발자
           <span className="text-blue-600"> 이승준</span>
@@ -12,7 +12,10 @@ export default function AboutMe() {
       </div>
 
       {/* 본문 */}
-      <div className="flex flex-col gap-6 text-lg text-gray-600 leading-relaxed">
+      <div
+        className="flex flex-col gap-6 text-lg text-gray-600 leading-relaxed animate-fade-in-up"
+        style={{ animationDelay: "150ms" }}
+      >
         <p>
           혼자가 아닌{" "}
           <span className="font-bold text-gray-900">
@@ -39,7 +42,10 @@ export default function AboutMe() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 mt-4 pt-6 border-t border-gray-200">
+      <div
+        className="flex flex-col gap-3 mt-4 pt-6 border-t border-gray-200 animate-fade-in-up"
+        style={{ animationDelay: "300ms" }}
+      >
         {/* Main Focus */}
         <div className="flex items-center gap-3">
           <span className="text-sm font-bold text-gray-400 uppercase tracking-wider min-w-[100px]">

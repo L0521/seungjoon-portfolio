@@ -3,7 +3,7 @@ import { FaRunning } from "react-icons/fa";
 export default function ContinuousCard() {
   return (
     <div
-      style={{ animationDelay: "300ms" }}
+      style={{ animationDelay: "450ms" }}
       className="animate-fade-in-up flex flex-col gap-4 p-6 border-1 border-dashed rounded-2xl border-gray-200 shadow-sm bg-gray-50 opacity-80 transition-all group"
     >
       <div className="flex justify-between items-end">

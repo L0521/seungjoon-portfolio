@@ -9,7 +9,7 @@ export default function CouncilCard({ onClick }: CouncilCardProps) {
     <div>
       <div
         onClick={() => onClick()}
-        style={{ animationDelay: "100ms" }}
+        style={{ animationDelay: "150ms" }}
         className="animate-fade-in-up flex flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-green-300 transition-all bg-white cursor-pointer group"
       >
         <div className="flex justify-between items-end">
