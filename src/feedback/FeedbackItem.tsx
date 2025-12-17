@@ -12,6 +12,7 @@ import TextareaAutosize from "react-textarea-autosize";
 
 export default function FeedbackItem({
   item,
+  index,
   isAdmin,
   onDelete,
   onUpdate,
@@ -45,10 +46,15 @@ export default function FeedbackItem({
 
   return (
     <li
-      className={`p-5 rounded-xl border shadow-sm flex gap-4 items-start relative
+      className={`p-5 rounded-xl border shadow-sm flex gap-4 items-start relative animate-fade-in-up
       ${!canShow ? "bg-gray-50 border-gray-200" : "bg-white border-gray-100"}
       ${item.isSecret && isAdmin ? "border-blue-200 bg-blue-50" : ""}
+      opacity-0
     `}
+      style={{
+        animationDelay: `${index * 0.1}s`,
+        animationFillMode: "both",
+      }}
     >
       <div
         className={`mt-1 text-3xl flex-none ${

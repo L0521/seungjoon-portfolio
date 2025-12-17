@@ -146,10 +146,11 @@ export default function Feedback() {
         </div>
 
         <ul className="grid grid-cols-1 gap-3">
-          {list.map((item) => (
+          {list.map((item, index) => (
             <FeedbackItem
               key={item.id}
               item={item}
+              index={index}
               isAdmin={isAdmin}
               onDelete={handleDelete}
               onUpdate={handleUpdate}
@@ -163,7 +164,13 @@ export default function Feedback() {
         </ul>
       </div>
 
-      <FeedbackForm onSubmit={handleCreate} />
+      <FeedbackForm
+        onSubmit={handleCreate}
+        style={{
+          animationDelay: `${list.length * 0.1}s`,
+          animationFillMode: "both",
+        }}
+      />
     </div>
   );
 }

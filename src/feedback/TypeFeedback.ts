@@ -17,10 +17,12 @@ export interface FeedbackFormProps {
     text: string;
     isSecret: boolean;
   }) => void;
+  style?: React.CSSProperties;
 }
 
 export interface FeedbackItemProps {
   item: GuestMessage;
+  index: number;
   isAdmin: boolean;
   onDelete: (id: string, password?: string) => void;
   onUpdate: (id: string, newText: string) => void;
