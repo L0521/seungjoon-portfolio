@@ -84,7 +84,7 @@ export default function PortfolioWebsiteDetail() {
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Utility-First 방식으로 스타일링 시간을 단축하고, 직관적인
-                클래스명을 통해
+                클래스명을 통해{" "}
                 <span className="font-bold text-gray-800">
                   모바일 반응형 디자인
                 </span>
@@ -108,6 +108,23 @@ export default function PortfolioWebsiteDetail() {
                   피드백 메시지(Feedback Message)
                 </span>{" "}
                 기능을 구현했습니다.
+              </p>
+            </div>
+
+            {/* Tech 4: Zustand 카드 */}
+            <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-purple-400 transition-colors">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-3xl">🐻</span>
+                <h4 className="font-bold text-gray-900">Zustand</h4>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                <span className="font-bold text-gray-800">전역 상태 관리</span>
+                를 위해 도입했습니다. 복잡한 Props 전달(Props Drilling) 없이
+                필요한 컴포넌트에서 즉시 데이터를 꺼내 쓸 수 있어, 코드의{" "}
+                <span className="font-bold text-gray-800">
+                  가독성과 개발 효율성
+                </span>
+                을 높였습니다.
               </p>
             </div>
           </div>
