@@ -1,4 +1,4 @@
-import { FaUserFriends } from "react-icons/fa";
+import { FaChevronRight, FaUserFriends } from "react-icons/fa";
 
 interface CouncilCardProps {
   onClick: () => void;
@@ -9,7 +9,7 @@ export default function CouncilCard({ onClick }: CouncilCardProps) {
     <div>
       <div
         onClick={() => onClick()}
-        style={{ animationDelay: "150ms" }}
+        style={{ animationDelay: "100ms" }}
         className="animate-fade-in-up flex flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-green-300 transition-all bg-white cursor-pointer group"
       >
         <div className="flex justify-between items-end">
@@ -29,13 +29,22 @@ export default function CouncilCard({ onClick }: CouncilCardProps) {
           </span>
           을 통해 조직의 목표를 달성했습니다.
         </p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">
-            Leadership
-          </span>
-          <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">
-            Communication
-          </span>
+
+        <div className="flex justify-between items-center group">
+          <div className="flex flex-wrap gap-2 mt-2">
+            <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">
+              Leadership
+            </span>
+            <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">
+              Communication
+            </span>
+          </div>
+
+          <div className="mt-3">
+            <p className="text-sm text-gray-300 group-hover:text-gray-400">
+              <FaChevronRight />
+            </p>
+          </div>
         </div>
       </div>
     </div>

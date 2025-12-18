@@ -1,4 +1,4 @@
-import { FaChalkboardTeacher } from "react-icons/fa";
+import { FaChalkboardTeacher, FaChevronRight } from "react-icons/fa";
 
 interface UMCCardProps {
   onClick: () => void;
@@ -27,13 +27,22 @@ export default function UMCCard({ onClick }: UMCCardProps) {
         </span>
         을 진행했습니다.
       </p>
-      <div className="flex flex-wrap gap-2 mt-2">
-        <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
-          Self-Study
-        </span>
-        <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
-          Code Review
-        </span>
+
+      <div className="flex justify-between items-center group">
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+            Self-Study
+          </span>
+          <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+            Code Review
+          </span>
+        </div>
+
+        <div className="mt-3">
+          <p className="text-sm text-gray-300 group-hover:text-gray-400">
+            <FaChevronRight />
+          </p>
+        </div>
       </div>
     </div>
   );

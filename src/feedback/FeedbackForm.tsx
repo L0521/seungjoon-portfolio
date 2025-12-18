@@ -12,7 +12,7 @@ export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!message.trim() || !nickname.trim() || !password.trim()) {
-      alert("모든 칸에 입력해주세요.");
+      alert("모든 칸에 다 입력해주세요.");
       return;
     }
     // 부모에게 데이터 전달
@@ -45,14 +45,14 @@ export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
             type="text"
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
-            placeholder="닉네임(익명)"
+            placeholder="닉네임"
             className="w-1/2 p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
           />
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="비밀번호(삭제용)"
+            placeholder="비밀번호"
             className="w-1/2 p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
           />
           <button
@@ -63,6 +63,7 @@ export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
           </button>
         </div>
 
+        {/* 비공개 글 로직 */}
         <div className="flex justify-end mt-1">
           <label className="flex items-center cursor-pointer gap-2 select-none">
             <span

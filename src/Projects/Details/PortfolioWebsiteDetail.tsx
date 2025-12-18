@@ -1,9 +1,9 @@
-import { FaGithub, FaReact } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaReact } from "react-icons/fa";
 import { SiFirebase, SiTailwindcss } from "react-icons/si";
 
 export default function PortfolioWebsiteDetail() {
   return (
-    <div className="animate-fade-in-up flex flex-col gap-10">
+    <div className="animate-fade-in-up flex flex-col gap-10 pb-4">
       {/* 타이틀 영역 */}
       <div className="border-b border-gray-200 pb-4">
         <h2 className="text-3xl font-bold text-gray-900">Portfolio Website</h2>
@@ -231,15 +231,27 @@ export default function PortfolioWebsiteDetail() {
           </div>
         </div>
 
-        {/* 링크 버튼 */}
-        <div className="flex justify-center items-center pt-2">
+        {/* 링크 버튼 영역 */}
+        <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="https://github.com/L0521/seungjoon-portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-700 transition-all shadow-md hover:shadow-lg font-bold"
+            className="flex-1 flex justify-center items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-700 transition-all shadow-md hover:shadow-lg font-bold"
           >
             <FaGithub className="text-xl" /> 코드 바로가기
+            <FaExternalLinkAlt className="text-xs opacity-50" />
+          </a>
+          <a
+            href="https://untitled-coding.tistory.com/16"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex justify-center items-center gap-2 px-6 py-3 bg-white text-gray-600 rounded-xl border border-gray-300 rounded-xl hover:bg-gray-50 transition-all shadow-md hover:shadow-lg font-semibold"
+          >
+            <span className="grayscale opacity-70 flex gap-2 items-center">
+              📂 프로젝트 회고록
+              <FaExternalLinkAlt className="text-xs opacity-50" />
+            </span>
           </a>
         </div>
       </div>

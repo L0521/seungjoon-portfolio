@@ -1,4 +1,4 @@
-import { FaPenNib } from "react-icons/fa";
+import { FaChevronRight, FaPenNib } from "react-icons/fa";
 
 interface CodingBlogCardProps {
   onClick: () => void;
@@ -26,16 +26,24 @@ export default function CodingBlogCard({ onClick }: CodingBlogCardProps) {
           하여 공부한 내용을 바탕으로 코드를 설명하는 블로그 운영을 하고
           있습니다.
         </p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
-            Writing
-          </span>
-          <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
-            Algorithm
-          </span>
-          <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
-            Trouble Shooting
-          </span>
+
+        <div className="flex justify-between items-center group">
+          <div className="flex flex-wrap gap-2 mt-2">
+            <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
+              Writing
+            </span>
+            <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
+              Algorithm
+            </span>
+            <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
+              Trouble Shooting
+            </span>
+          </div>
+          <div className="mt-3">
+            <p className="text-sm text-gray-300 group-hover:text-gray-400">
+              <FaChevronRight />
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { FaPenNib, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function CodingBlogDetail() {
   return (
-    <div className="animate-fade-in-up flex flex-col gap-8">
+    <div className="animate-fade-in-up flex flex-col gap-8 pb-10 mb">
       {/* 타이틀 영역 */}
       <div className="border-b border-gray-200 pb-4">
         <h2 className="text-3xl font-bold text-gray-900">코딩 블로그 운영</h2>
@@ -160,8 +160,9 @@ export default function CodingBlogDetail() {
             rel="noopener noreferrer"
             className="flex-1 flex justify-center items-center gap-2 px-6 py-3 bg-white text-gray-600 border border-gray-300 rounded-xl hover:bg-gray-50 transition-all shadow-sm font-semibold"
           >
-            <span className="grayscale opacity-70">
+            <span className="grayscale opacity-70 flex gap-2 items-center">
               📂 이전 블로그 아카이브
+              <FaExternalLinkAlt className="text-xs opacity-50" />
             </span>
           </a>
         </div>
