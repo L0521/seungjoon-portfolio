@@ -128,22 +128,28 @@ export default function Feedback() {
   return (
     <div className="flex flex-col gap-8 animate-fade-in-up">
       <div className="flex flex-col gap-4">
-        <div className=" mb-2 pb-2 border-b border-gray-200">
-          <h3
-            onClick={toggleAdminMode}
-            className="font-bold text-gray-800 text-2xl ml-1 mb-2 select-none flex items-center gap-1"
-          >
-            Feedback Messages{" "}
-            <span className="text-blue-600 text-sm align-super">
-              {list.length}
+        <h3
+          onClick={toggleAdminMode}
+          className="font-bold text-gray-800 text-2xl ml-1 mb-2 select-none flex items-center gap-1"
+        >
+          Feedback Messages{" "}
+          <span className="text-blue-600 text-sm align-super">
+            {list.length}
+          </span>
+          {isAdmin && (
+            <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+              Admin ON
             </span>
-            {isAdmin && (
-              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
-                Admin ON
-              </span>
-            )}
-          </h3>
-        </div>
+          )}
+        </h3>
+
+        <FeedbackForm
+          onSubmit={handleCreate}
+          style={{
+            animationDelay: "100ms",
+            animationFillMode: "both",
+          }}
+        />
 
         <ul className="grid grid-cols-1 gap-3">
           {list.map((item, index) => (
@@ -163,14 +169,6 @@ export default function Feedback() {
           )}
         </ul>
       </div>
-
-      <FeedbackForm
-        onSubmit={handleCreate}
-        style={{
-          animationDelay: `${list.length * 0.1}s`,
-          animationFillMode: "both",
-        }}
-      />
     </div>
   );
 }

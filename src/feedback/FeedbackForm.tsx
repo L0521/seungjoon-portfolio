@@ -27,7 +27,7 @@ export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
 
   return (
     <div
-      className="bg-gray-50 p-6 rounded-2xl border border-gray-200 animate-fade-in-up opacity-0"
+      className="bg-gray-50 p-5 rounded-sm border border-gray-200 animate-fade-in-up opacity-0 -mt-2"
       style={style}
     >
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
@@ -71,7 +71,13 @@ export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
                 isSecret ? "text-blue-600" : "text-gray-400"
               }`}
             >
-              {isSecret ? "비공개" : "전체 공개"}
+              {isSecret ? (
+                "비공개로 설정됨"
+              ) : (
+                <>
+                  클릭 시 <strong>비공개</strong>로 설정됩니다.
+                </>
+              )}
             </span>
             <div className="relative">
               <input

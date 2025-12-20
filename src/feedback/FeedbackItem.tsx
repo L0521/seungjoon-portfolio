@@ -52,7 +52,7 @@ export default function FeedbackItem({
       opacity-0
     `}
       style={{
-        animationDelay: `${index * 0.1}s`,
+        animationDelay: `${(index + 1) * 0.1}s`,
         animationFillMode: "both",
       }}
     >
