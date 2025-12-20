@@ -3,7 +3,7 @@ import { FaPaperPlane } from "react-icons/fa";
 import TextareaAutosize from "react-textarea-autosize";
 import type { FeedbackFormProps } from "./TypeFeedback";
 
-export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
+export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
   const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -26,10 +26,7 @@ export default function FeedbackForm({ onSubmit, style }: FeedbackFormProps) {
   };
 
   return (
-    <div
-      className="bg-gray-50 p-5 rounded-sm border border-gray-200 animate-fade-in-up opacity-0 -mt-2"
-      style={style}
-    >
+    <div className="bg-gray-50 p-5 rounded-sm border border-gray-200 animate-fade-in-up opacity-0 -mt-2">
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <div className="flex gap-3">
           <TextareaAutosize

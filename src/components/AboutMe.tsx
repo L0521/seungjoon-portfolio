@@ -36,7 +36,7 @@ export default function AboutMe() {
         </p>
 
         <p>
-          책임감 있게 맡은 바를 완수하며, 팀에
+          책임감 있게 맡은 바를 꼼꼼하게 완수하여, 팀에
           <span className="font-bold text-gray-900"> 긍정적인 에너지</span>를
           더하겠습니다.
         </p>
