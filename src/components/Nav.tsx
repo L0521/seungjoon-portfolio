@@ -24,7 +24,7 @@ export default function Nav({ activeMenu, onMenuClick }: NavProps) {
             : "text-gray-300 hover:text-gray-500"
         } pb-1 transition-colors cursor-pointer`}
       >
-        Project
+        Projects
       </button>
       <button
         onClick={() => onMenuClick("Activities")}

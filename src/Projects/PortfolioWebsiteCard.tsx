@@ -25,7 +25,7 @@ export default function PortfolioWebsiteCard({
         {/* 설명 */}
         <p className="text-gray-600 leading-relaxed break-keep">
           군 복무 중 틈틈이 기획하여 제작한 첫 개인 프로젝트이자 반응형 웹
-          포트폴리오입니다. UMC에서 배운 내용을 바탕으로
+          포트폴리오입니다.
           <span className="font-bold text-gray-800"> React와 Tailwind CSS</span>
           를 활용하여 직접 기획부터 디자인, 개발까지 수행했습니다.
         </p>
