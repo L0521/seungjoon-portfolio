@@ -3,9 +3,11 @@ import PortfolioWebsiteDetail from "../Projects/Details/PortfolioWebsiteDetail";
 import PortfolioWebsiteCard from "../Projects/PortfolioWebsiteCard";
 import ContinuousCard from "../Projects/ContinuousCard";
 import { useProjectStore } from "../stores/useProjectStore";
+import { useModalReset } from "../hooks/useModalReset";
 
 export default function Project() {
-  const { projectDetailId, setProjectDetailId } = useProjectStore();
+  const { projectDetailId, setProjectDetailId, reset } = useProjectStore();
+  useModalReset(reset);
 
   // 상세 페이지(Details)
   if (projectDetailId) {

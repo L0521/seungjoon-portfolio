@@ -7,9 +7,11 @@ import UMCDetail from "../Activities/Details/UMCDetail";
 import CouncilDetail from "../Activities/Details/CouncilDetail";
 import CodingBlogDetail from "../Activities/Details/CodingBlogDetail";
 import { useActivityStore } from "../stores/useActivityStore";
+import { useModalReset } from "../hooks/useModalReset";
 
 export default function Activities() {
-  const { activityDetailId, setActivityDetailId } = useActivityStore();
+  const { activityDetailId, setActivityDetailId, reset } = useActivityStore();
+  useModalReset(reset);
 
   // 상세 페이지(Sections)
   if (activityDetailId) {
