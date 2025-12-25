@@ -10,11 +10,8 @@ import {
   getDocs,
   updateDoc,
 } from "firebase/firestore";
-import {
-  ADMIN_PASSWORD,
-  COLLECTION_NAME,
-} from "../feedback_temp/ConstantsFeedback";
-import type { GuestMessage } from "../feedback_temp/TypeFeedback";
+import { ADMIN_PASSWORD, COLLECTION_NAME } from "../feedback/ConstantsFeedback";
+import type { GuestMessage } from "../feedback/TypeFeedback";
 
 interface FeedbackState {
   // 상태 (States)

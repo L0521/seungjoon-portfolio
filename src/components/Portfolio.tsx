@@ -4,7 +4,7 @@ import Project from "./Project";
 import profileImg from "../assets/profile.jpeg";
 import Activities from "./Activities";
 import Contact from "./Contact";
-import Feedback from "../feedback_temp/Feedback";
+import Feedback from "../feedback/Feedback";
 import { useMenuStore } from "../stores/useMenuStore";
 
 export default function Portfolio() {
