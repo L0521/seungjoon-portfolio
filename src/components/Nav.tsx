@@ -2,7 +2,7 @@ import { useMenuStore } from "../stores/useMenuStore";
 
 export default function Nav() {
   const { activeMenu, setActiveMenu } = useMenuStore();
-  const menuItems = ["About Me", "Project", "Activities", "Feedback"];
+  const menuItems = ["About Me", "Projects", "Activities", "Feedback"];
 
   return (
     <div className="flex gap-5 justify-center md:justify-start pb-2">

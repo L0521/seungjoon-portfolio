@@ -39,7 +39,7 @@ export default function Portfolio() {
           <div className="flex-1 flex flex-col justify-center">
             {activeMenu === "About Me" && <AboutMe />}
             {activeMenu === "Activities" && <Activities />}
-            {activeMenu === "Project" && <Project />}
+            {activeMenu === "Projects" && <Project />}
             {activeMenu === "Feedback" && <Feedback />}
           </div>
         </div>
