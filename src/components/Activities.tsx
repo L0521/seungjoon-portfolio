@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import UMCCard from "../Activities/UMCCard";
 import CouncilCard from "../Activities/CouncilCard";
@@ -7,29 +6,30 @@ import ContinuousCard from "../Activities/ContinuousCard";
 import UMCDetail from "../Activities/Details/UMCDetail";
 import CouncilDetail from "../Activities/Details/CouncilDetail";
 import CodingBlogDetail from "../Activities/Details/CodingBlogDetail";
+import { useActivityStore } from "../stores/useActivityStore";
 
 export default function Activities() {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const { activityDetailId, setActivityDetailId } = useActivityStore();
 
   // 상세 페이지(Sections)
-  if (selectedId) {
+  if (activityDetailId) {
     return (
       <div className="animate-fade-in-up flex flex-col gap-6 h-full ">
         <button
-          onClick={() => setSelectedId(null)}
+          onClick={() => setActivityDetailId(null)}
           className="flex items-center gap-2 text-gray-500 hover:text-black transition-colors w-fit font-bold cursor-pointer"
         >
           <FaArrowLeft /> 목록으로 돌아가기
         </button>
 
         {/* --- 1. UMC 활동 상세 --- */}
-        {selectedId === "umc" && <UMCDetail />}
+        {activityDetailId === "umc" && <UMCDetail />}
 
         {/* --- 2. 학생회 활동 상세 --- */}
-        {selectedId === "council" && <CouncilDetail />}
+        {activityDetailId === "council" && <CouncilDetail />}
 
         {/* --- 3. 수학 블로그 활동 상세 --- */}
-        {selectedId === "mathblog" && <CodingBlogDetail />}
+        {activityDetailId === "mathblog" && <CodingBlogDetail />}
       </div>
     );
   }
@@ -38,13 +38,13 @@ export default function Activities() {
   return (
     <div className="flex flex-col gap-8 h-full justify-center">
       {/* 카드 1: UMC */}
-      <UMCCard onClick={() => setSelectedId("umc")} />
+      <UMCCard onClick={() => setActivityDetailId("umc")} />
 
       {/* 카드 2: 학생회 */}
-      <CouncilCard onClick={() => setSelectedId("council")} />
+      <CouncilCard onClick={() => setActivityDetailId("council")} />
 
       {/* 카드 3: 수학 블로그 */}
-      <CodingBlogCard onClick={() => setSelectedId("mathblog")} />
+      <CodingBlogCard onClick={() => setActivityDetailId("mathblog")} />
 
       {/* 카드 4: 자기계발 */}
       <ContinuousCard />

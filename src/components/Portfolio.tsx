@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import AboutMe from "./AboutMe";
 import Project from "./Project";
 import profileImg from "../assets/profile.jpeg";
 import Activities from "./Activities";
 import Contact from "./Contact";
-import Feedback from "../feedback/Feedback";
+import Feedback from "../Feedback/Feedback";
+import { useMenuStore } from "../stores/useMenuStore";
 
 export default function Portfolio() {
-  const [activeMenu, setActiveMenu] = useState(() => {
-    return sessionStorage.getItem("currentMenu") || "About Me";
-  });
-
-  useEffect(() => {
-    sessionStorage.setItem("currentMenu", activeMenu);
-  }, [activeMenu]);
+  const { activeMenu } = useMenuStore();
 
   // issue 1
   return (
@@ -39,7 +33,7 @@ export default function Portfolio() {
         {/* 오른쪽 영역 */}
         <div className="w-full md:w-2/3 flex flex-col h-full">
           <div className="mb-6">
-            <Nav activeMenu={activeMenu} onMenuClick={setActiveMenu} />
+            <Nav />
           </div>
 
           <div className="flex-1 flex flex-col justify-center">
