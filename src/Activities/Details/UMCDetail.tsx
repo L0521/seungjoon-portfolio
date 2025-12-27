@@ -53,9 +53,9 @@ export default function UMCDetail() {
           <div className="grid grid-cols-1 gap-5">
             {/* Exp 1: 자기주도 학습 */}
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-yellow-400 transition-colors">
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="font-bold text-lg text-gray-900 flex items-center gap-2">
-                  📖 주도적인 학습 (Self-Directed)
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-gray-900 flex gap-2">
+                  📖 주도적인 학습
                 </h4>
                 <div className="flex gap-2">
                   <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-bold">
@@ -73,20 +73,20 @@ export default function UMCDetail() {
               <ul className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg space-y-1">
                 <li className="flex items-center gap-2">
                   <FaCheckCircle className="text-yellow-500 text-xs" />
-                  학습한 내용을 Notion에 정리하여 나만의 기술 문서로{" "}
+                  학습한 내용을 Notion에 정리,
                   <strong>아카이빙</strong>
                 </li>
                 <li className="flex items-center gap-2">
                   <FaCheckCircle className="text-yellow-500 text-xs" />
-                  강의 영상을 참고하여 <strong>Clone Coding</strong>
+                  강의 영상을 참고, <strong>Clone Coding</strong>
                 </li>
               </ul>
             </div>
 
             {/* Exp 2: 지식 공유 */}
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-yellow-400 transition-colors">
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="font-bold text-lg text-gray-900 flex items-center gap-2">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-gray-900 flex gap-2">
                   🗣️ 코드 리뷰 & 지식 공유
                 </h4>
                 <div className="flex gap-2">
@@ -114,6 +114,39 @@ export default function UMCDetail() {
                   대한 고민
                 </li>
               </ul>
+            </div>
+
+            {/* Exp 3: 프로젝트 */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-yellow-400 transition-colors">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-gray-900 flex gap-2">
+                  💡 팀 프로젝트 활동
+                </h4>
+                <div className="flex gap-2">
+                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-bold">
+                    Communication
+                  </span>
+                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-bold">
+                    Project
+                  </span>
+                </div>
+              </div>
+              {/* <p className="text-gray-600 mb-3">
+                스터디원들과 서로의 코드를 분석하고 더 나은 구현 방법에 대해
+                토론했습니다.
+              </p> */}
+              {/* <ul className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg space-y-1">
+                <li className="flex items-center gap-2">
+                  <FaCheckCircle className="text-yellow-500 text-xs" />
+                  매주 핵심 키워드 <strong>퀴즈</strong>를 통해 학습 내용 점검
+                  및 복습
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaCheckCircle className="text-yellow-500 text-xs" />
+                  공부한 코드 내용 발표를 통해 <strong>더 좋은 코드</strong>에
+                  대한 고민
+                </li>
+              </ul> */}
             </div>
           </div>
         </div>

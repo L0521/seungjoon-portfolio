@@ -3,40 +3,52 @@ import { SiTistory } from "react-icons/si";
 
 export default function Contact() {
   return (
-    <div className="h-full bg-gray-100 rounded-2xl flex items-center justify-center border-1 border-gray-200">
-      <span className="flex flex-col gap-2">
-        <ul className="text-sm font-light">
-          <li>🏫 Department of Mathematics, HUFS</li>
-          <li>📧 E. sj020521@naver.com</li>
-          <li>📞 Tel. 010-9191-3396</li>
-        </ul>
-        <div className="flex gap-3 justify-center font-bold">
-          <a
-            href="https://github.com/L0521"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer hover:text-pink-500 transition-colors"
-          >
-            <FaGithub size={25} />
-          </a>
-          <a
-            href="https://www.instagram.com/li.s_j/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer hover:text-pink-500 transition-colors"
-          >
-            <FaInstagram size={25} />
-          </a>
-          <a
-            href="https://untitled-coding.tistory.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer hover:text-pink-500 transition-colors"
-          >
-            <SiTistory size={22} />
-          </a>
-        </div>
-      </span>
+    <div className="flex flex-col gap-4 w-full px-23 md:px-2">
+      {/* 1. 개인 정보 영역 */}
+      <ul className="flex flex-col gap-1 text-sm text-gray-600">
+        <li className="flex items-start gap-2 select-none">
+          <span className="shrink-0">🏫</span>
+          <span>Math & CS (Dual Degree), HUFS</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="shrink-0 select-none">📧</span>
+          sj020521@naver.com
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="shrink-0 select-none">📞</span>
+          <span className="tracking-wide">010-9191-3396</span>
+        </li>
+      </ul>
+      {/* 2. 소셜 아이콘 영역 */}
+      <div className="flex gap-5 justify-center">
+        <a
+          href="https://github.com/L0521"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-gray-900 transition-colors transform hover:scale-110"
+          title="GitHub"
+        >
+          <FaGithub size={22} />
+        </a>
+        <a
+          href="https://www.instagram.com/li.s_j/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-pink-500 transition-colors transform hover:scale-110"
+          title="Instagram"
+        >
+          <FaInstagram size={22} />
+        </a>
+        <a
+          href="https://untitled-coding.tistory.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-orange-500 transition-colors transform hover:scale-110"
+          title="Tistory"
+        >
+          <SiTistory size={18} />
+        </a>
+      </div>
     </div>
   );
 }

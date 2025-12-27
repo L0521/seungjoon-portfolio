@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="flex flex-col gap-8 break-keep">
+    <div className="flex flex-col justify-center h-full px-6 md:px-12 pb-12 pt-6 md:pt-12 gap-8 break-keep select-none">
       {/* 제목 영역 */}
       <div>
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 animate-fade-in-up">

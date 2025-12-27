@@ -8,10 +8,11 @@ export default function PortfolioWebsiteCard({
   onClick,
 }: PortfolioWebsiteProps) {
   return (
-    <div>
+    <div className="h-full">
       {/* 포트폴리오 웹사이트 카드 */}
       <div
         onClick={() => onClick()}
+        style={{ animationDelay: "100ms" }}
         className="animate-fade-in-up flex flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-shadow bg-white cursor-pointer group"
       >
         {/* 상단 */}
@@ -24,7 +25,7 @@ export default function PortfolioWebsiteCard({
 
         {/* 설명 */}
         <p className="text-gray-600 leading-relaxed break-keep">
-          군 복무 중 틈틈이 기획하여 제작한 첫 개인 프로젝트이자 반응형 웹
+          복무 중 틈틈이 기획하여 제작한 첫 개인 프로젝트이자 반응형 웹
           포트폴리오입니다.
           <span className="font-bold text-gray-800"> React와 Tailwind CSS</span>
           를 활용하여 직접 기획부터 디자인, 개발까지 수행했습니다.
@@ -49,10 +50,11 @@ export default function PortfolioWebsiteCard({
               Zustand
             </span>
           </div>
+
           <div className="mt-3">
-            <p className="text-sm text-gray-300 group-hover:text-gray-400">
+            <div className="absolute bottom-6 right-6 text-gray-300 group-hover:text-blue-500 transition-colors">
               <FaChevronRight />
-            </p>
+            </div>
           </div>
         </div>
       </div>

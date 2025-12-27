@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import FeedbackForm from "./FeedbackForm";
 import FeedbackItem from "./FeedbackItem";
 import { useFeedbackStore } from "../stores/useFeedbackStore";
+import { FaRegCommentDots } from "react-icons/fa";
 
 export default function Feedback() {
   const { list, isAdmin, fetchList, loginAdmin, logoutAdmin } =
@@ -27,15 +28,16 @@ export default function Feedback() {
   };
 
   return (
-    <div className="flex flex-col gap-8 animate-fade-in-up">
+    <div className="flex flex-col gap-8 h-full px-6 md:px-12 pb-12 pt-6 md:pt-12 animate-fade-in-up">
       <div className="flex flex-col gap-4">
         {/* 헤더 */}
         <h3
           onClick={toggleAdminMode}
-          className="font-bold text-gray-800 text-2xl ml-1 mb-2 select-none flex items-center gap-1 cursor-pointer"
+          className="font-bold text-gray-800 text-3xl gap-2 ml-1 mb-2 select-none flex items-center gap-1"
         >
+          <FaRegCommentDots className="text-2xl text-purple-500" />
           Feedback Messages{" "}
-          <span className="text-blue-600 text-sm align-super">
+          <span className="text-purple-600 text-sm align-super">
             {list.length}
           </span>
           {isAdmin && (
@@ -49,7 +51,7 @@ export default function Feedback() {
         <FeedbackForm />
 
         {/* 리스트 */}
-        <ul className="grid grid-cols-1 gap-3">
+        <ul className="grid grid-cols-1 gap-3 select-none">
           {list.map((item, index) => (
             <FeedbackItem key={item.id} item={item} index={index} />
           ))}

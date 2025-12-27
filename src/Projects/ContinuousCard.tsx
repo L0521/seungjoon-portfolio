@@ -2,22 +2,37 @@ import { FaRocket } from "react-icons/fa";
 
 export default function ContinuousCard() {
   return (
-    <div
-      style={{ animationDelay: "100ms" }}
-      className="animate-fade-in-up flex flex-col gap-4 p-6 border-1 border-dashed border-gray-200 rounded-2xl shadow-sm bg-gray-50 opacity-80 transition-all group"
-    >
-      <div className="flex justify-between items-end">
-        <div className="flex items-center gap-3">
-          <FaRocket className="text-2xl text-red-500 group-hover:-translate-y-1 group-hover:rotate-12 transition-transform duration-300" />
-          <h3 className="text-xl font-bold text-gray-700">
-            새로운 프로젝트 추가 예정
-          </h3>
+    <div className="h-full">
+      <div
+        style={{ animationDelay: "200ms" }}
+        className="relative animate-fade-in-up flex flex-col h-full justify-center items-center text-center gap-4 p-8 border-2 border-dashed border-gray-300 rounded-2xl bg-gray-50/50 hover:bg-gray-50 transition-colors group overflow-hidden cursor-default select-none"
+      >
+        {/* 배경 워터마크 */}
+        <div className="absolute -bottom-6 -right-6 text-[10rem] text-gray-200/50 -rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-transform duration-500 z-0">
+          <FaRocket />
         </div>
-        <span className="text-sm text-gray-500">Current</span>
+
+        {/* 콘텐츠 */}
+        <div className="relative z-10 flex flex-col items-center gap-3">
+          <div className="p-4 bg-white rounded-full shadow-sm border border-gray-100 transition-transform duration-300">
+            <FaRocket className="text-3xl text-red-400 group-hover:text-red-500 transition-colors" />
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-gray-700 mb-1">
+              Coming Soon
+            </h3>
+            <p className="text-sm text-gray-500 break-keep max-w-[200px] mx-auto leading-relaxed">
+              새로운 프로젝트와 활동들이
+              <br />곧 업데이트될 예정입니다!
+            </p>
+          </div>
+
+          <span className="inline-block px-3 py-1 bg-gray-200 text-gray-600 text-xs font-bold rounded-full mt-2">
+            In Progress
+          </span>
+        </div>
       </div>
-      <p className="text-sm text-gray-600 break-keep">
-        지금도 다양한 프로젝트에 지속적으로 도전하고 만들어나가고 있습니다!
-      </p>
     </div>
   );
 }

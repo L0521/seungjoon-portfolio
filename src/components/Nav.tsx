@@ -2,10 +2,10 @@ import { useMenuStore } from "../stores/useMenuStore";
 
 export default function Nav() {
   const { activeMenu, setActiveMenu } = useMenuStore();
-  const menuItems = ["About Me", "Projects", "Activities", "Feedback"];
+  const menuItems = ["About", "Projects", "Activities", "Feedback"];
 
   return (
-    <div className="flex gap-5 justify-center md:justify-start pb-2">
+    <div className="flex gap-5 md:gap-4 justify-center md:justify-start pb-2 select-none">
       {menuItems.map((menu) => (
         <button
           key={menu}

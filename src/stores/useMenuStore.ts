@@ -9,7 +9,7 @@ interface MenuState {
 export const useMenuStore = create<MenuState>()(
   persist(
     (set) => ({
-      activeMenu: "About Me",
+      activeMenu: "About",
       setActiveMenu: (menu) => set({ activeMenu: menu }),
     }),
     {
