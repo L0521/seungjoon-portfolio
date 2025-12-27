@@ -3,7 +3,7 @@ import { SiTistory } from "react-icons/si";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col gap-4 w-full px-23 md:px-2">
+    <div className="flex flex-col gap-4 w-full p-5 md:px-2">
       {/* 1. 개인 정보 영역 */}
       <ul className="flex flex-col gap-1 text-sm text-gray-600">
         <li className="flex items-start gap-2 select-none">

@@ -43,7 +43,7 @@ export default function Project() {
           <h3 className="font-bold text-3xl tracking-tight">Projects</h3>
         </div>
         <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-          아이디어 구상부터 배포까지, 고민의 흔적이 담긴 작업물입니다.
+          아이디어 및 배포, 고민의 흔적이 담긴 작업물입니다.
         </p>
       </div>
 

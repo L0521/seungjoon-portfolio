@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="flex flex-col justify-center h-full px-6 md:px-12 pb-12 pt-6 md:pt-12 gap-8 break-keep select-none">
+    <div className="flex flex-col justify-center h-full md:px-12 pb-12 pt-6 md:pt-12 gap-8 break-keep select-none">
       {/* 제목 영역 */}
       <div>
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 animate-fade-in-up">
@@ -90,7 +90,7 @@ export default function AboutMe() {
           <span className="text-sm font-bold text-gray-400 uppercase tracking-wider min-w-[100px]">
             Strength
           </span>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
               Communication
             </span>
