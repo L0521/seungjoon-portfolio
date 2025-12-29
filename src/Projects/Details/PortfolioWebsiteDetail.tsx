@@ -54,7 +54,7 @@ export default function PortfolioWebsiteDetail() {
             🛠 사용 기술 및 선정 이유
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Tech 1: React */}
             <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-blue-400 transition-colors">
               <div className="flex items-center gap-3 mb-3">
@@ -93,7 +93,7 @@ export default function PortfolioWebsiteDetail() {
             </div>
 
             {/* Tech 3: Firebase 카드 */}
-            <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-yellow-400 transition-colors md:col-span-2 lg:col-span-1">
+            <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-yellow-400 transition-colors lg:col-span-1">
               <div className="flex items-center gap-3 mb-3">
                 <SiFirebase className="text-3xl text-yellow-500" />
                 <h4 className="font-bold text-gray-900">

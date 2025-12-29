@@ -5,7 +5,7 @@ export default function Nav() {
   const menuItems = ["About", "Projects", "Activities", "Feedback"];
 
   return (
-    <div className="flex gap-5 md:gap-4 justify-center md:justify-start pb-2 select-none">
+    <div className="flex gap-4 justify-center lg:justify-start pb-2 select-none">
       {menuItems.map((menu) => (
         <button
           key={menu}

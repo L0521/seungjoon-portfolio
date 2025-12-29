@@ -160,7 +160,7 @@ export default function UMCDetail() {
             </span>
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {/* Point 1 */}
             <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:-translate-y-1 transition-transform">
               <div className="text-2xl mb-2">🏃</div>

@@ -147,7 +147,7 @@ export default function CouncilDetail() {
             </span>
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {/* Card 1 */}
             <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
               <div className="text-3xl mb-3">🗣️</div>

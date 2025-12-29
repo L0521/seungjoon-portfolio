@@ -3,10 +3,12 @@ import FeedbackForm from "./FeedbackForm";
 import FeedbackItem from "./FeedbackItem";
 import { useFeedbackStore } from "../stores/useFeedbackStore";
 import { FaRegCommentDots } from "react-icons/fa";
+import { useScrollTop } from "../hooks/useScrollTop";
 
 export default function Feedback() {
   const { list, isAdmin, fetchList, loginAdmin, logoutAdmin } =
     useFeedbackStore();
+  useScrollTop(fetchList);
 
   // 초기 데이터 로드
   useEffect(() => {
