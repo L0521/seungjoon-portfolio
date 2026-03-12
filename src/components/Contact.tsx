@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col gap-4 w-full p-5 md:px-2">
       {/* 1. 개인 정보 영역 */}
-      <ul className="flex flex-col gap-1 text-sm text-gray-600">
+      <ul className="-mt-2 flex flex-col gap-1 text-sm text-gray-600">
         <li className="flex items-start gap-2 select-none">
           <span className="shrink-0">🏫</span>
           <span>Math & CS (Dual Degree), HUFS</span>
@@ -48,6 +48,13 @@ export default function Contact() {
         >
           <SiTistory size={18} />
         </a>
+      </div>
+
+      {/* 3. 카피라이트 영역 */}
+      <div className="-mt-1 text-center select-none">
+        <p className="text-[10px] text-gray-400 font-medium tracking-tight">
+          © 2026. SeungJoon Lee. All rights reserved.
+        </p>
       </div>
     </div>
   );
