@@ -6,11 +6,11 @@ interface CodingBlogCardProps {
 
 export default function CodingBlogCard({ onClick }: CodingBlogCardProps) {
   return (
-    <div>
+    <div className="h-full">
       <div
         onClick={() => onClick()}
-        style={{ animationDelay: "300ms" }}
-        className="relative animate-fade-in-up flex h-full flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-purple-300 transition-all bg-white cursor-pointer group"
+        style={{ animationDelay: "600ms" }}
+        className="h-full relative animate-fade-in-up flex flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-purple-300 transition-all bg-white cursor-pointer group"
       >
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">

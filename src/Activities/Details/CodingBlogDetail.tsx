@@ -8,7 +8,7 @@ export default function CodingBlogDetail() {
         <h2 className="text-3xl font-bold text-gray-900">코딩 블로그 운영</h2>
         <div className="flex items-center gap-2 mt-2">
           <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded">
-            Since
+            Period
           </span>
           <p className="text-sm text-gray-500">2022.01 ~ Present</p>
         </div>

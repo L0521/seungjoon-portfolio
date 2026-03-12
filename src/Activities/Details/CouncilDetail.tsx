@@ -31,7 +31,8 @@ export default function CouncilDetail() {
               <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
                 <p className="font-semibold text-blue-900 mb-1">🔑 핵심 역량</p>
                 <p className="text-sm text-blue-800">
-                  조직 내 소통 능력 · 돌발 상황 대처 · 행사 기획 및 운영
+                  조직 내 소통 능력 · 책임감 (Responsibility) · 행사 기획 및
+                  운영
                 </p>
               </div>
               <p className="text-lg text-gray-700 mb-4 mt-4">

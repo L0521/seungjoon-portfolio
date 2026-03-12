@@ -1,10 +1,14 @@
 import { FaArrowLeft, FaUsers } from "react-icons/fa"; // 아이콘 추가
 import UMCCard from "../Activities/UMCCard";
+import UMC10thCard from "../Activities/UMC10thCard";
 import CouncilCard from "../Activities/CouncilCard";
+import CSSpringBoot from "../Activities/CSSpringBoot";
 import CodingBlogCard from "../Activities/CodingBlogCard";
 import ContinuousCard from "../Activities/ContinuousCard";
 import UMCDetail from "../Activities/Details/UMCDetail";
+import UMC10thDetail from "../Activities/Details/UMC10thDetail";
 import CouncilDetail from "../Activities/Details/CouncilDetail";
+import CSSpringBootDetail from "../Activities/Details/CSSpringBootDetail";
 import CodingBlogDetail from "../Activities/Details/CodingBlogDetail";
 import { useActivityStore } from "../stores/useActivityStore";
 import { useModalReset } from "../hooks/useModalReset";
@@ -33,7 +37,9 @@ export default function Activities() {
         {/* --- 상세 컴포넌트들 --- */}
         <div className="px-6 md:px-12 pt-8 pb-12">
           {activityDetailId === "umc" && <UMCDetail />}
+          {activityDetailId === "umc10" && <UMC10thDetail />}
           {activityDetailId === "council" && <CouncilDetail />}
+          {activityDetailId === "springboot" && <CSSpringBootDetail />}
           {activityDetailId === "mathblog" && <CodingBlogDetail />}
         </div>
       </div>
@@ -56,23 +62,53 @@ export default function Activities() {
 
       {/* 2. 그리드 레이아웃 적용 (모바일 1열 / 데스크탑 2열) */}
       <div className="animate-fade-in-up grid grid-cols-1 lg:grid-cols-2 gap-6 pb-10">
-        {/* 카드 1: UMC */}
-        <div className="transform transition duration-300 hover:-translate-y-1">
-          <UMCCard onClick={() => setActivityDetailId("umc")} />
-        </div>
+        {[
+          {
+            id: "umc",
+            date: "2025.09",
+            component: <UMCCard onClick={() => setActivityDetailId("umc")} />,
+          },
+          {
+            id: "umc10",
+            date: "2026.02",
+            component: (
+              <UMC10thCard onClick={() => setActivityDetailId("umc10")} />
+            ),
+          },
+          {
+            id: "springboot",
+            date: "2026.03",
+            component: (
+              <CSSpringBoot onClick={() => setActivityDetailId("springboot")} />
+            ),
+          },
+          {
+            id: "council",
+            date: "2023.03",
+            component: (
+              <CouncilCard onClick={() => setActivityDetailId("council")} />
+            ),
+          },
+          {
+            id: "mathblog",
+            date: "2022.01",
+            component: (
+              <CodingBlogCard onClick={() => setActivityDetailId("mathblog")} />
+            ),
+          },
+        ]
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .map((activity) => (
+            <div
+              key={activity.id}
+              className="h-full transform transition duration-300 hover:-translate-y-1"
+            >
+              {activity.component}
+            </div>
+          ))}
 
-        {/* 카드 2: 학생회 */}
-        <div className="transform transition duration-300 hover:-translate-y-1">
-          <CouncilCard onClick={() => setActivityDetailId("council")} />
-        </div>
-
-        {/* 카드 3: 수학 블로그 */}
-        <div className="transform transition duration-300 hover:-translate-y-1">
-          <CodingBlogCard onClick={() => setActivityDetailId("mathblog")} />
-        </div>
-
-        {/* 카드 4: 자기계발 (Continuous) */}
-        <div className="transform transition duration-300 hover:-translate-y-1">
+        {/* 카드 4: 자기계발 (Continuous) - 항상 마지막 */}
+        <div className="h-full transform transition duration-300 hover:-translate-y-1">
           <ContinuousCard />
         </div>
       </div>

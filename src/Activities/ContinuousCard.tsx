@@ -4,7 +4,7 @@ export default function ContinuousCard() {
   return (
     <div className="h-full">
       <div
-        style={{ animationDelay: "200ms" }}
+        style={{ animationDelay: "500ms" }}
         className="relative animate-fade-in-up flex flex-col h-full justify-center items-center text-center gap-4 p-8 border-2 border-dashed border-gray-300 rounded-2xl bg-gray-50/50 hover:bg-gray-50 transition-colors group overflow-hidden cursor-default"
       >
         {/* 배경 워터마크 */}
