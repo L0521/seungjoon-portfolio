@@ -10,9 +10,9 @@ export default function UMCDetail() {
         </h2>
         <div className="flex items-center gap-2 mt-2">
           <span className="px-2 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded">
-            Study
+            Term
           </span>
-          <p className="text-gray-500 text-sm">2025.09 ~ Present</p>
+          <p className="text-gray-500 text-sm">2025.09 ~ 2026.02</p>
         </div>
       </div>
 
@@ -25,20 +25,20 @@ export default function UMCDetail() {
 
           <div className="flex flex-col gap-4">
             <p className="text-lg text-gray-700">
-              대학생 연합 IT 동아리 UMC에서{" "}
+              대학생 연합 IT 동아리 UMC(University MakeUs Challenge)에서{" "}
               <span className="text-blue-600 font-bold">Web 파트 챌린저</span>로
-              활동하고 있습니다. 단순한 코딩 공부를 넘어, 정해진
-              커리큘럼(워크북)을 기반으로{" "}
+              활동했습니다. 단순한 코딩 공부를 넘어, 정해진 커리큘럼(워크북)을
+              기반으로{" "}
               <span className="text-blue-600 font-bold">자기주도적 학습</span>을
               진행하고, 매주 스터디를 통해 지식을 공유하며 성장하는 커뮤니티
-              활동입니다.
+              활동을 진행했습니다.
             </p>
 
             <div className="bg-blue-50 p-5 rounded-xl border border-blue-100">
               <p className="text-blue-800 text-sm leading-relaxed">
                 서로의 코드를 리뷰해주고 모르는 것을 질문하며,{" "}
-                <strong>집단 지성</strong>을 통해 문제를 해결하는 경험을 쌓고
-                있습니다.
+                <strong>집단 지성</strong>을 통해 문제를 해결하는 경험을
+                쌓았습니다.
               </p>
             </div>
           </div>
@@ -116,37 +116,43 @@ export default function UMCDetail() {
               </ul>
             </div>
 
-            {/* Exp 3: 프로젝트 */}
+            {/* Exp 3: Proovy */}
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-yellow-400 transition-colors">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="font-bold text-lg text-gray-900 flex gap-2">
-                  💡 팀 프로젝트 활동
+                  🚀 Proovy (수학 AI 튜터 웹 서비스)
                 </h4>
                 <div className="flex gap-2">
-                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-bold">
-                    Communication
+                  <span className="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded font-bold">
+                    Frontend
                   </span>
                   <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-bold">
                     Project
                   </span>
                 </div>
               </div>
-              {/* <p className="text-gray-600 mb-3">
-                스터디원들과 서로의 코드를 분석하고 더 나은 구현 방법에 대해
-                토론했습니다.
-              </p> */}
-              {/* <ul className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg space-y-1">
+              <p className="text-gray-600 mb-3">
+                UMC 9th 활동의 꽃인 팀 프로젝트에서{" "}
+                <strong>프론트엔드 개발</strong>을 맡아 기획부터 실제 배포까지
+                아우르는 과정에 참여했습니다.
+              </p>
+              <ul className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg space-y-1">
                 <li className="flex items-center gap-2">
                   <FaCheckCircle className="text-yellow-500 text-xs" />
-                  매주 핵심 키워드 <strong>퀴즈</strong>를 통해 학습 내용 점검
-                  및 복습
+                  <strong>UI/UX 구현</strong>: 핵심 기능의 반응형 웹 인터페이스
+                  개발
                 </li>
                 <li className="flex items-center gap-2">
                   <FaCheckCircle className="text-yellow-500 text-xs" />
-                  공부한 코드 내용 발표를 통해 <strong>더 좋은 코드</strong>에
-                  대한 고민
+                  <strong>협업 프로세스</strong>: GitHub을 활용한 팀 단위 협업과
+                  코드 리뷰
                 </li>
-              </ul> */}
+                <li className="flex items-center gap-2">
+                  <FaCheckCircle className="text-yellow-500 text-xs" />
+                  <strong>서비스 런칭</strong>: 실제 사용자 피드백을 고려한
+                  완성도 향상
+                </li>
+              </ul>
             </div>
           </div>
         </div>

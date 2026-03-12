@@ -12,15 +12,15 @@ export default function PortfolioWebsiteCard({
       {/* 포트폴리오 웹사이트 카드 */}
       <div
         onClick={() => onClick()}
-        style={{ animationDelay: "100ms" }}
-        className="animate-fade-in-up flex flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-shadow bg-white cursor-pointer group"
+        style={{ animationDelay: "300ms" }}
+        className="h-full animate-fade-in-up flex flex-col gap-4 p-6 border rounded-2xl border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-shadow bg-white cursor-pointer group"
       >
         {/* 상단 */}
-        <div className="flex justify-between items-end">
+        <div className="flex justify-between items-center">
           <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
             Portfolio Website
           </h3>
-          <span className="text-sm text-gray-500">2024.12 ~</span>
+          <span className="text-sm text-gray-500 text-right">2024.12 ~</span>
         </div>
 
         {/* 설명 */}

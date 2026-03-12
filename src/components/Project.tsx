@@ -2,9 +2,13 @@ import { FaArrowLeft, FaLayerGroup } from "react-icons/fa";
 import PortfolioWebsiteDetail from "../Projects/Details/PortfolioWebsiteDetail";
 import PortfolioWebsiteCard from "../Projects/PortfolioWebsiteCard";
 import ContinuousCard from "../Projects/ContinuousCard";
+import ProovyCard from "../Projects/ProovyCard";
+import HarangCard from "../Projects/HarangCard";
 import { useProjectStore } from "../stores/useProjectStore";
 import { useModalReset } from "../hooks/useModalReset";
 import { useScrollTop } from "../hooks/useScrollTop";
+import ProovyDetail from "../Projects/Details/ProovyDetail";
+import HarangDetail from "../Projects/Details/HarangDetail";
 
 export default function Project() {
   const { projectDetailId, setProjectDetailId, reset } = useProjectStore();
@@ -29,6 +33,8 @@ export default function Project() {
         {/* --- 상세 내용 본문 --- */}
         <div className="px-6 md:px-12 pt-8 pb-12">
           {projectDetailId === "portfolio" && <PortfolioWebsiteDetail />}
+          {projectDetailId === "proovy" && <ProovyDetail />}
+          {projectDetailId === "harang" && <HarangDetail />}
         </div>
       </div>
     );
@@ -48,13 +54,42 @@ export default function Project() {
       </div>
 
       <div className="animate-fade-in-up grid grid-cols-1 lg:grid-cols-2 gap-6 pb-10">
-        <div className="transform transition duration-300 hover:-translate-y-1">
-          <PortfolioWebsiteCard
-            onClick={() => setProjectDetailId("portfolio")}
-          />
-        </div>
+        {[
+          {
+            id: "harang",
+            date: "2026.01",
+            component: (
+              <HarangCard onClick={() => setProjectDetailId("harang")} />
+            ),
+          },
+          {
+            id: "proovy",
+            date: "2025.12",
+            component: (
+              <ProovyCard onClick={() => setProjectDetailId("proovy")} />
+            ),
+          },
+          {
+            id: "portfolio",
+            date: "2024.12",
+            component: (
+              <PortfolioWebsiteCard
+                onClick={() => setProjectDetailId("portfolio")}
+              />
+            ),
+          },
+        ]
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .map((project) => (
+            <div
+              key={project.id}
+              className="h-full transform transition duration-300 hover:-translate-y-1"
+            >
+              {project.component}
+            </div>
+          ))}
 
-        <div className="transform transition duration-300 hover:-translate-y-1">
+        <div className="h-full transform transition duration-300 hover:-translate-y-1">
           <ContinuousCard />
         </div>
       </div>

@@ -58,6 +58,9 @@ export default function AboutMe() {
             <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
               TypeScript
             </span>
+            <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
+              Spring Boot
+            </span>
           </div>
         </div>
 
@@ -92,10 +95,16 @@ export default function AboutMe() {
           </span>
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+              Leadership
+            </span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
               Communication
             </span>
             <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
               Teamwork
+            </span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+              Responsibility
             </span>
           </div>
         </div>
