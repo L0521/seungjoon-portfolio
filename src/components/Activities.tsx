@@ -13,21 +13,41 @@ import CodingBlogDetail from "../Activities/Details/CodingBlogDetail";
 import { useActivityStore } from "../stores/useActivityStore";
 import { useModalReset } from "../hooks/useModalReset";
 import { useScrollTop } from "../hooks/useScrollTop";
+import { useHeaderVisible } from "../hooks/useHeaderVisible";
 
 export default function Activities() {
-  const { activityDetailId, setActivityDetailId, reset } = useActivityStore();
+  const {
+    activityDetailId,
+    setActivityDetailId,
+    listScrollTrigger,
+    triggerListScroll,
+    reset,
+  } = useActivityStore();
   useModalReset(reset);
+
+  // 상세 진입 시 스크롤
   useScrollTop(activityDetailId);
+  // 목록 복귀 시 스크롤 (주스탠드 트리거 감시)
+  useScrollTop(listScrollTrigger);
+
+  const isHeaderVisible = useHeaderVisible();
 
   // --- 상세 페이지 (Details) ---
   if (activityDetailId) {
     return (
-      <div className="animate-fade-in-up flex flex-col min-h-full select-none">
+      <div className="flex flex-col min-h-full select-none">
         {/* --- 상단 고정 헤더 --- */}
-        <div className="sticky top-0 z-20 w-full bg-white/90 backdrop-blur-md border-b mt-5 border-gray-100 px-6 py-4 md:px-12 md:py-6">
+        <div
+          className={`sticky top-0 z-20 w-full bg-white/10 backdrop-blur-md border-b border-white/5 px-6 py-4 md:px-12 md:py-6 transition-transform duration-500 ease-in-out ${
+            isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
+        >
           <button
-            onClick={() => setActivityDetailId(null)}
-            className="group flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-gray-900 transition-all bg-white border border-gray-200 hover:border-gray-400 rounded-full px-4 py-2 shadow-sm hover:shadow-md cursor-pointer"
+            onClick={() => {
+              triggerListScroll();
+              setActivityDetailId(null);
+            }}
+            className="group flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-gray-900 transition-all bg-white border border-gray-200 hover:border-gray-400 rounded-full px-4 py-2 shadow-sm cursor-pointer whitespace-nowrap"
           >
             <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" />
             목록으로 돌아가기
@@ -35,7 +55,7 @@ export default function Activities() {
         </div>
 
         {/* --- 상세 컴포넌트들 --- */}
-        <div className="px-6 md:px-12 pt-8 pb-12">
+        <div className="animate-fade-in-up px-6 md:px-12 pt-8 pb-12">
           {activityDetailId === "umc" && <UMCDetail />}
           {activityDetailId === "umc10" && <UMC10thDetail />}
           {activityDetailId === "council" && <CouncilDetail />}
