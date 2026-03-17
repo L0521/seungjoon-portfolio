@@ -51,7 +51,7 @@ export default function AboutMe() {
           <span className="text-sm font-bold text-gray-400 uppercase tracking-wider min-w-[100px]">
             Main Focus
           </span>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
               React
             </span>
