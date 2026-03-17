@@ -30,16 +30,26 @@ export default function Activities() {
   // 목록 복귀 시 스크롤 (주스탠드 트리거 감시)
   useScrollTop(listScrollTrigger);
 
-  const isHeaderVisible = useHeaderVisible();
+  const {
+    visible: isHeaderVisible,
+    isTop,
+    isReady,
+  } = useHeaderVisible(activityDetailId);
 
   // --- 상세 페이지 (Details) ---
   if (activityDetailId) {
     return (
-      <div className="flex flex-col min-h-full select-none">
+      <div className="flex flex-col min-h-full select-none relative">
         {/* --- 상단 고정 헤더 --- */}
         <div
-          className={`sticky top-0 z-20 w-full bg-white/10 backdrop-blur-md border-b border-white/5 px-6 py-4 md:px-12 md:py-6 transition-transform duration-500 ease-in-out ${
-            isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+          className={`sticky top-0 z-20 w-full px-6 md:px-12 ${
+            !isReady
+              ? "!transition-none"
+              : "transition-all duration-500 ease-in-out"
+          } ${isHeaderVisible ? "translate-y-0" : "-translate-y-full"} ${
+            isTop
+              ? "pt-6 pb-2 md:pt-12 md:pb-4 bg-transparent border-transparent"
+              : "py-4 md:py-6 bg-transparent md:bg-white/10 md:backdrop-blur-sm border-transparent"
           }`}
         >
           <button
