@@ -15,10 +15,10 @@ export default function Portfolio() {
   useScrollTop(activeMenu);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#f3f4f6] px-4 py-8 sm:p-0 sm:h-screen sm:overflow-hidden [@media(max-height:768px)]:h-auto [@media(max-height:768px)]:overflow-visible [@media(max-height:768px)]:py-12">
-      <div className="flex flex-col-reverse sm:flex-row w-full max-w-6xl sm:h-[85vh] [@media(max-height:768px)]:h-auto bg-white sm:rounded-3xl sm:shadow-2xl sm:overflow-hidden border border-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-[#f3f4f6] px-4 py-8 md:p-0 md:h-screen md:overflow-hidden">
+      <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl md:h-[85vh] bg-white md:rounded-3xl md:shadow-2xl md:overflow-hidden border border-gray-100">
         {/* --- 왼쪽 영역 사이드바 --- */}
-        <div className="w-full sm:w-[320px] lg:w-[360px] shrink-0 flex flex-col sm:p-6 md:p-10 bg-gray-50 h-auto sm:h-full [@media(max-height:768px)]:hidden hidden sm:flex border-t sm:border-t-0 sm:border-r border-gray-100 justify-between">
+        <div className="w-full md:w-[340px] shrink-0 flex flex-col p-6 md:p-10 bg-gray-50 h-auto md:h-full hidden md:flex border-r border-gray-100 justify-between">
           <div>
             <div className="w-full aspect-[3/4] bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 mb-6 md:mb-8 select-none">
               <img
@@ -27,7 +27,7 @@ export default function Portfolio() {
                 className="w-full h-full object-cover filter brightness-[0.75]"
               />
             </div>
-            <div className="hidden sm:flex flex-col py-2">
+            <div className="hidden md:flex flex-col py-2">
               <Nav />
             </div>
           </div>
@@ -41,10 +41,10 @@ export default function Portfolio() {
         </div>
 
         {/* --- 오른쪽 영역 본문 --- */}
-        <div className="flex-1 h-full sm:overflow-y-auto bg-white scroll-smooth custom-scrollbar">
+        <div className="flex-1 h-full md:overflow-y-auto bg-white scroll-smooth custom-scrollbar">
           <div className="max-w-[760px] mx-auto min-h-full flex flex-col">
             {/* 1. 모바일 또는 짧은 화면 네비게이션 바 */}
-            <div className="sm:hidden [@media(max-height:820px)]:flex flex justify-center origin-bottom w-full px-6 pt-10 pb-4 mb-4 border-b border-gray-100">
+            <div className="flex md:hidden justify-center origin-bottom w-full px-6 pt-10 pb-4 mb-4 border-b border-gray-100">
               <Nav />
             </div>
 
@@ -63,8 +63,8 @@ export default function Portfolio() {
               {activeMenu === "Feedback" && <Feedback />}
             </div>
 
-            {/* 3. 모바일/짧은 화면 공용 하단 레이아웃 (사진 왼쪽, 콘택 오른쪽) */}
-            <div className="flex sm:hidden [@media(max-height:768px)]:flex flex-col bg-gray-50 border-t border-gray-100 mt-auto rounded-t-3xl border-gray-200">
+            {/* 3. 모바일 공용 하단 레이아웃 (사진 왼쪽, 콘택 오른쪽) */}
+            <div className="flex md:hidden flex-col bg-gray-50 border-t border-gray-100 mt-auto rounded-t-3xl border-gray-200">
               <div className="flex items-center justify-between gap-6 px-8 py-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
