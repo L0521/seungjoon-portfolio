@@ -8,8 +8,8 @@ import {
   FaPen,
 } from "react-icons/fa";
 import TextareaAutosize from "react-textarea-autosize";
-import { useFeedbackStore } from "../stores/useFeedbackStore";
-import type { GuestMessage } from "./TypeFeedback";
+import { useFeedbackStore } from "../../stores/useFeedbackStore";
+import type { GuestMessage } from "./feedback.types";
 
 interface FeedbackItemProps {
   item: GuestMessage;

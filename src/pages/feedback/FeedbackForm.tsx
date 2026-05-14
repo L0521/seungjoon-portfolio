@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import TextareaAutosize from "react-textarea-autosize";
-import { useFeedbackStore } from "../stores/useFeedbackStore";
+import { useFeedbackStore } from "../../stores/useFeedbackStore";
 
 export default function FeedbackForm() {
   const { createFeedback } = useFeedbackStore();

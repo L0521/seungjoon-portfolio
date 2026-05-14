@@ -1,4 +1,4 @@
-import CouncilImg from "../../assets/Council.jpeg";
+import CouncilImg from "../../../../assets/Council.jpeg";
 
 export default function CouncilDetail() {
   return (

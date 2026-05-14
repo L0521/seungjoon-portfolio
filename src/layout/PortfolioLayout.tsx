@@ -1,18 +1,16 @@
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import Nav from "./Nav";
-import AboutMe from "./AboutMe";
-import Projects from "./Projects";
-import profileImg from "../assets/profile.jpeg";
-import Activities from "./Activities";
 import Contact from "./Contact";
-import Feedback from "../feedback/Feedback";
-import { useMenuStore } from "../stores/useMenuStore";
-import { useScrollTop } from "../hooks/useScrollTop";
+import profileImg from "../assets/profile.jpeg";
 
-export default function Portfolio() {
-  const { activeMenu } = useMenuStore();
+export default function PortfolioLayout() {
+  const { pathname } = useLocation();
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  // 메뉴 변경 시 스크롤 초기화 (About <-> Feedback 등)
-  useScrollTop(activeMenu);
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#f3f4f6] px-4 py-8 md:p-0 md:h-screen md:overflow-hidden">
@@ -41,29 +39,22 @@ export default function Portfolio() {
         </div>
 
         {/* --- 오른쪽 영역 본문 --- */}
-        <div className="flex-1 h-full md:overflow-y-auto bg-white scroll-smooth custom-scrollbar">
+        <div
+          ref={scrollRef}
+          className="flex-1 h-full md:overflow-y-auto bg-white scroll-smooth custom-scrollbar"
+        >
           <div className="max-w-[760px] mx-auto min-h-full flex flex-col">
-            {/* 1. 모바일 또는 짧은 화면 네비게이션 바 */}
+            {/* 1. 모바일 네비게이션 바 */}
             <div className="flex md:hidden justify-center origin-bottom w-full px-6 pt-10 pb-4 mb-4 border-b border-gray-100">
               <Nav />
             </div>
 
             {/* 2. 메인 콘텐츠 영역 */}
             <div className="flex-1 flex flex-col">
-              {/* Case A: 세로 중앙 정렬이 필요한 페이지 (About) */}
-              {activeMenu === "About" && (
-                <div className="flex-1 flex flex-col justify-center p-6 md:p-0">
-                  <AboutMe />
-                </div>
-              )}
-
-              {/* Case B: 상단부터 스크롤이 필요한 페이지 (Projects, Activities, Feedback) */}
-              {activeMenu === "Projects" && <Projects />}
-              {activeMenu === "Activities" && <Activities />}
-              {activeMenu === "Feedback" && <Feedback />}
+              <Outlet />
             </div>
 
-            {/* 3. 모바일 공용 하단 레이아웃 (사진 왼쪽, 콘택 오른쪽) */}
+            {/* 3. 모바일 공용 하단 레이아웃 */}
             <div className="flex md:hidden flex-col bg-gray-50 border-t border-gray-100 mt-auto rounded-t-3xl border-gray-200">
               <div className="flex items-center justify-between gap-6 px-8 py-6">
                 <div className="flex items-center gap-4">
@@ -85,7 +76,6 @@ export default function Portfolio() {
                   <Contact isCompact={true} hideCopyright={true} />
                 </div>
               </div>
-              {/* 하단 중앙 저작권 */}
               <div className="pb-6 text-center select-none border-t border-gray-100 pt-2 bg-gray-50/50">
                 <p className="text-[10px] text-gray-400 font-medium tracking-tight">
                   © 2026. SeungJoon Lee. All rights reserved.

@@ -13,10 +13,10 @@ import {
   SiReactquery,
 } from "react-icons/si";
 import { VscJson, VscCode } from "react-icons/vsc";
-import proovyLogo from "../../assets/Projects/Proovy/logo.png";
-import loginImg from "../../assets/Projects/Proovy/login.png";
-import priceImg from "../../assets/Projects/Proovy/price.png";
-import proovyVideo from "../../assets/Projects/Proovy/proovy.mp4";
+import proovyLogo from "../../../../assets/Projects/Proovy/logo.png";
+import loginImg from "../../../../assets/Projects/Proovy/login.png";
+import priceImg from "../../../../assets/Projects/Proovy/price.png";
+import proovyVideo from "../../../../assets/Projects/Proovy/proovy.mp4";
 
 export default function ProovyDetail() {
   return (
